@@ -1,0 +1,7 @@
+import { auditLogs, invoices, loans, payments, providers, users } from '../mock-data'
+export const proveedoresService = { listar: async () => providers, obtener: async (id:string) => providers.find(p=>p.id===id), crear: async (data: unknown) => data, actualizar: async (id:string,data:unknown) => ({id,data}) }
+export const facturasService = { listar: async () => invoices, obtener: async (id:string) => invoices.find(i=>i.id===id), crear: async (data:unknown) => data, actualizar: async (id:string,data:unknown) => ({id,data}) }
+export const pagosService = { listar: async () => payments, obtener: async (id:string) => payments.find(p=>p.id===id), crear: async (data:unknown) => data, actualizar: async (id:string,data:unknown) => ({id,data}) }
+export const prestamosService = { listar: async () => loans, obtener: async (id:string) => loans.find(l=>l.id===id), crear: async (data:unknown) => data, actualizar: async (id:string,data:unknown) => ({id,data}) }
+export const bitacoraService = { listar: async () => auditLogs, obtener: async (id:string) => auditLogs.find(l=>l.id===id), crear: async (data:unknown) => data, actualizar: async (id:string,data:unknown) => ({id,data}) }
+export const usuariosService = { listar: async () => users }
